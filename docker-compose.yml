@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5000:5000"
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: A@D!udy3DiW*YVyVnfU9
+      MYSQL_DATABASE: database
+    ports:
+      - "3306:3306"
