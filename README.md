@@ -27,15 +27,28 @@ Visual Studio Code: Develop and manage the codebase.
 # File structure
 
 personalwebsite/
+
 ├── frontend/
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   ├── pages/
+
 │   └── Dockerfile
+
 ├── backend/
+
 │   ├── routes/
+
 │   ├── models/
+
 │   └── Dockerfile
+
 ├── database/
+
 │   └── schema.sql
+
 └── docker-compose.yml
+
