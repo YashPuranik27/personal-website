@@ -5,6 +5,45 @@
   text-align: center;
 }
 
+/* Reset and Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #1a1a1a; /* Match your homepage background */
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
