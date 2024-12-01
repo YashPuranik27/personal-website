@@ -1,8 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* Reset and Global Styles */
@@ -12,7 +10,7 @@ body, html {
   font-family: 'Arial', sans-serif;
   background: #1a1a1a; /* Match your homepage background */
   color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow: hidden; /* Prevent horizontal scrolling */
 }
 
 a {

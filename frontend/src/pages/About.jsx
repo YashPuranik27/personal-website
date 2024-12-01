@@ -1,21 +1,29 @@
-// src/pages/About.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.5 }}
+            style={{
+                height: '100vh',
+                background: '#1a1a1a',
+                color: '#fff',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+            }}
+        >
             <h1>About Me</h1>
             <p>
-                Hello! My name is Yash Puranik, a Software Engineer specializing in C++ and modern web
-                development. I have experience working on advanced projects, including the F-35 Block 4
-                upgrades, and have a passion for creating innovative software solutions.
+                Hello! My name is Yash Puranik. I am a software engineer specializing in developing robust and scalable
+                solutions. I have a strong passion for solving complex problems and building impactful projects.
             </p>
-            <p>
-                I hold a Bachelor of Science in Computer Science with a minor in Data Science from Rutgers
-                University, and I actively contribute to mentoring programs and volunteer activities.
-            </p>
-            <a href="/contact">Contact Me</a>
-        </div>
+        </motion.div>
     );
 };
 
