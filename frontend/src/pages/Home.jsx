@@ -62,8 +62,8 @@ const Home = () => {
       <p>For now, the main purpose of this website is to show off my programming skills.</p>
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '20px' }}>
-        {['/about', '/contact'].map((path, index) => {
-          const buttonLabels = ['Learn More', 'Contact'];
+        {['/about', '/contact', '/visualizers'].map((path, index) => {
+          const buttonLabels = ['Learn More', 'Contact', 'Visualizers'];
           return (
             !explodedButton && (
               <motion.button
