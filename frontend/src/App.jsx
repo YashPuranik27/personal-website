@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Visualizers from './pages/Visualizers';
+import Sorting from './pages/Sorting';
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -16,6 +17,7 @@ const AnimatedRoutes = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/visualizers" element={<Visualizers />} />
+                <Route path="/sorting" element={<Sorting />} />
             </Routes>
         </AnimatePresence>
     );

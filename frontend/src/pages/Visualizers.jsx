@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './Visualizers.css';
+import { useNavigate } from 'react-router-dom'; 
 
 const PathfindingCanvas = () => {
   const canvasRef = useRef(null);
@@ -166,6 +167,7 @@ const PathfindingCanvas = () => {
 };
 
 const Visualizers = () => {
+  const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -175,7 +177,7 @@ const Visualizers = () => {
       className="visualizers-container"
     >
         <div className="back-to-home">
-            <button onClick={() => navigate('/')}>Back to Home</button>
+          <button onClick={() => navigate('/')}>Back to Home</button>
         </div>
       <PathfindingCanvas />
       <div className="content">
@@ -190,6 +192,7 @@ const Visualizers = () => {
             className="visualizer-button"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => navigate('/sorting')} // Use navigate() to go to Sorting page
           >
             Sorting Algorithms
           </motion.button>
