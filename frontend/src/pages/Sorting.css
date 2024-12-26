@@ -1,0 +1,94 @@
+/* General container */
+.sorting-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #1a1a1a;
+    color: #fff;
+    user-select: none; /* Prevent text selection while dragging */
+}
+
+
+/* Header bar with controls */
+.sorting-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    border-bottom: 2px solid #444;
+    z-index: 1;
+}
+
+/* Dropdown and buttons */
+.sorting-controls select,
+.sorting-controls button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sorting-controls select {
+    background: #444;
+    color: #fff;
+}
+
+.clear-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sorting-controls .visualize-button {
+    background: green;
+    color: #fff;
+}
+
+/* Grid container */
+.sorting-grid {
+    display: grid;
+    grid-template-rows: repeat(28, 1fr); /* 28 rows */
+    grid-template-columns: repeat(76, 1fr); /* 76 columns */
+    gap: 0; /* No gaps between cells */
+    flex-grow: 1;
+    border: 1px solid #00bfff;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); /* Adjust height to fit below controls */
+}
+
+.grid-cell {
+    background: #fff;
+    border: 1px solid #00bfff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For the symbol positioning */
+}
+
+/* Symbol styling */
+.symbol {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    position: absolute; /* Center the symbol within the cell */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevent interaction with the symbol itself */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sorting-grid {
+        grid-template-rows: repeat(20, 1fr);
+        grid-template-columns: repeat(50, 1fr);
+    }
+}
